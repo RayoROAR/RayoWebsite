@@ -1,1 +1,0 @@
-window.location.replace("https://rayo75.itch.io/green-top");
