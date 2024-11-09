@@ -1,0 +1,1 @@
+window.location.replace("https://drive.google.com/file/d/1-OXhvRx_SC1xB_Rz15HIPalLIhYn4HdU/view?usp=drive_link");
