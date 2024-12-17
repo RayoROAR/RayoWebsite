@@ -4,21 +4,91 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nasty</title>
+        <link rel="stylesheet" href="mainStyle.css">
     </head>
 
-    <body style="text-align: center;">
-        <h1>NASTY</h1>
+    <body style="text-align: center; background-color: #d2feff;">
         <h1 style="display: none;">Tranquila, no hay secretos por aqui</h1>
-        <p>Holaaaa :]</p>
-        <p>De momento no hay nada por aquí pero prepárate para mañana! :D</p>
-        <p>(Va a ser un cumpleaños de una semana!)</p>
-        <br>
-        <!-- Display the countdown timer in an element -->
-        <h1 id="demo"></p>
 
+        <div id="intro">
+            <h1>NASTY</h1>
+
+            <p>Holaaaa :]</p>
+            <p>De momento no hay nada por aquí pero prepárate para mañana! :D</p>
+            <p>(Va a ser un cumpleaños de una semana!)</p>
+
+            <br>
+            <!-- Display the countdown timer in an element -->
+            <h1 id="demo"></p>
+        </div>
+
+        <div id="unlocked" class="box" style="display: none;">
+            <div class="row header">
+                <h1>NASTY</h1>
+                <p>Gracias por esperar :]</p>
+                <p>A partir de hoy, esta página será tu núcleo para acceder a todas las demás páginas que hayas coleccionado previamente.</p>
+                <p>Si antes te dije que inspeccionar elemento estaba prohibido ahora está MEGA PROHIBIDO, esa es la única norma :]</p>
+
+                <br>
+
+                <div class="grid-container">
+                    <a class="kinda-hidden" href="./encuentrame/">Encuéntrame</a>
+                    <a class="kinda-hidden" href="./jojo/">John Johnson</a>
+                    <a class="kinda-hidden" href="./shimeji/">Shimeji</a>
+                    <a class="kinda-hidden" href="./jiji/">BROMITA</a>
+                    <a class="kinda-hidden" href="./indicios/">Indicios</a>
+
+                    <a class="kinda-hidden" href="./meencontrasteee/">Me encontraste!</a>
+                    <a class="kinda-hidden" href="./jojo/guion">John Johnson: Guión</a>
+                    <a class="kinda-hidden" href="./С-днем-рождения">С-днем-рождения</a>
+                    <a class="kinda-hidden" href="./marryandreproduce/">Marry and reproduce</a>
+                    <a class="kinda-hidden" href="./nicky/">Nicky</a>
+
+                    <img class="kinda-hidden" src="./media/c.png" alt="" height="15" style="image-rendering: pixelated; image-rendering: -moz-crisp-edges;">
+                    <a class="kinda-hidden" href="./jojo/analisis">John Johnson: Análisis</a>
+                    <a class="kinda-hidden" href="./Настя">Настя</a>
+                    <img class="kinda-hidden" src="./media/i.png" alt="" height="15" style="image-rendering: pixelated; image-rendering: -moz-crisp-edges;">
+                    <img class="kinda-hidden" src="./media/n.png" alt="" height="15" style="image-rendering: pixelated; image-rendering: -moz-crisp-edges;">
+
+                    <p></p>
+                    <a class="kinda-hidden" href="./jojo/storyboard">John Johnson: Storyboard</a>
+                    <img class="kinda-hidden" src="./media/r.png" alt="" height="15" style="image-rendering: pixelated; image-rendering: -moz-crisp-edges;">
+                    <p></p>
+                    <p></p>
+
+                    <p></p>
+                    <a class="kinda-hidden" href="./jojo/fin">John Johnson: Fin</a>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    
+                    <p></p>
+                    <img class="kinda-hidden" src="./media/j.png" alt="" height="15" style="image-rendering: pixelated; image-rendering: -moz-crisp-edges;">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <a class="kinda-hidden" href="./regaloverdadero/">Regalo Verdadero</a>
+                <br>
+                <br>
+            </div>
+            
+            <div class="row content">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0Q3Cset_f1g?si=PQMD7kcLYIrtSEGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="row footer">
+                <img src="./media/j.png" alt="" height="30" style="image-rendering: pixelated; image-rendering: -moz-crisp-edges;">
+                <img src="./media/r.png" alt="" height="30" style="image-rendering: pixelated; image-rendering: -moz-crisp-edges;">
+                <img src="./media/i.png" alt="" height="30" style="image-rendering: pixelated; image-rendering: -moz-crisp-edges;">
+            </div>
+        </div>
+        
         <script>
+            var introDiv = document.getElementById("intro");
+            var unlockedDiv = document.getElementById("unlocked");
             // Set the date we're counting down to
-            var countDownDate = new Date("Dec 17, 2024 22:00:00").getTime();
+            var countDownDate = new Date("Dec 17, 2024 22:02:00").getTime();
 
             // Update the count down every 1 second
             var x = setInterval(function() {
@@ -43,6 +113,8 @@
             if (distance < 0) {
                 clearInterval(x);
                 document.getElementById("demo").innerHTML = "EXPIRED";
+                introDiv.style = "display: none;"
+                unlockedDiv.style = "display: flex;"
             }
             }, 1000);
         </script>
